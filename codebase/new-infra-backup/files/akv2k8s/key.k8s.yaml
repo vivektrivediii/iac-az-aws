@@ -1,0 +1,15 @@
+apiVersion: spv.no/v1
+kind: AzureKeyVaultSecret
+metadata:
+  name: ${name}
+  namespace: ${namespace}
+spec:
+  vault:
+    name: ${keyvault_name}
+    object:
+      name: ${name}
+      type: key
+  output:
+    secret:
+      name: ${name}
+      dataKey: ${data_key}

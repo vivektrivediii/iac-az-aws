@@ -1,0 +1,12 @@
+
+config:
+  exporters:
+    logzio:
+      region: ${logzio_region}
+      account_token: ${logzio_token}
+
+tolerations:
+- key: dedicated
+  operator: Equal
+  value: ${tolerations_value}
+  effect: NoSchedule
